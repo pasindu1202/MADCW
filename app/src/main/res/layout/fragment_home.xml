@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/netflix_background" android:fitsSystemWindows="true"> <!-- This view can be used to ensure the status bar has a consistent background color
-         even if the main content scrolls underneath it. -->
+    android:background="@color/netflix_background" android:fitsSystemWindows="true">
     <View
         android:id="@+id/statusBarBackground"
         android:layout_width="0dp"

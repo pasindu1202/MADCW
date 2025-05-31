@@ -72,9 +72,7 @@ class HomeViewModel(private val repository: MovieRepository) : ViewModel() {
         }
     }
 
-    /**
-     * Clears the current error message. Call this after displaying the error.
-     */
+
     fun clearErrorMessage() {
         _errorMessage.value = null
     }

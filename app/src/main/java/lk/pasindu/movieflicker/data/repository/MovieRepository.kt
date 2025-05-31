@@ -19,11 +19,7 @@ class MovieRepository(private val api: TmdbApiService) {
         private const val API_KEY = TmdbApiService.API_KEY
     }
 
-    /**
-     * Generic safe API call wrapper.
-     * Reduces boilerplate for error handling in each specific fetch method.
-     * It returns the successful response or null if an error occurs.
-     */
+
     private suspend fun <T> safeApiCall(apiCall: suspend () -> T): T? {
         return withContext(Dispatchers.IO) {
             try {
@@ -42,8 +38,6 @@ class MovieRepository(private val api: TmdbApiService) {
         }
     }
 
-    // --- Specific Movie Category Fetch Methods ---
-    // These methods now call the specific TmdbApiService methods and handle their results.
 
     suspend fun getPopularMovies(): List<Movie> {
         val response = safeApiCall { api.getPopularMovies(API_KEY) }
@@ -65,17 +59,6 @@ class MovieRepository(private val api: TmdbApiService) {
         return response?.results ?: emptyList()
     }
 
-    // --- Existing Generic Methods (if still used elsewhere) ---
-    // If you only use the specific methods above, you can remove this generic one.
-    // However, if your search or other parts of the app dynamically build categories, keep it.
-    /*
-    suspend fun getMovies(category: String, genreId: String? = null): List<Movie> {
-        val response = safeApiCall { api.getMoviesByCategory(category, genreId, API_KEY) }
-        return response?.results ?: emptyList()
-    }
-    */
-
-    // --- Existing Genre and Search Methods ---
 
     suspend fun getGenres(): List<Genre> {
         val response = safeApiCall { api.getGenres(API_KEY) } // Pass API_KEY
@@ -87,9 +70,5 @@ class MovieRepository(private val api: TmdbApiService) {
         return response?.results ?: emptyList()
     }
 
-    // You can add more specific movie detail fetching methods here if needed
-    // suspend fun getMovieDetails(movieId: Int): Movie? {
-    //     val response = safeApiCall { api.getMovieDetails(movieId, API_KEY) }
-    //     return response
-    // }
+
 }

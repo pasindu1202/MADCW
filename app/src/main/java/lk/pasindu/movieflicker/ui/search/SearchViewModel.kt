@@ -44,12 +44,7 @@ class SearchViewModel(private val repository: MovieRepository) : ViewModel() {
             _results.value = movies
             _isLoading.value = false // Set loading to false when results are received
 
-            // Optional: Handle error display based on empty results if needed
-            // if (movies.isEmpty()) {
-            //     _error.value = "No results found for '$query'. Try a different search."
-            // } else {
-            //     _error.value = null
-            // }
+
         }
     }
 }

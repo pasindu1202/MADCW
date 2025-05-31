@@ -113,13 +113,7 @@ class HomeFragment : Fragment() {
             updateUiVisibility(viewModel.movies.value?.isEmpty() ?: true, isLoading)
         }
 
-        // Optional: Observe error messages from ViewModel
-        // viewModel.errorMessage.observe(viewLifecycleOwner) { message ->
-        //     if (message != null) {
-        //         Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
-        //         viewModel.clearErrorMessage() // Clear message after showing
-        //     }
-        // }
+
     }
 
     private fun updateUiVisibility(isResultsEmpty: Boolean, isLoading: Boolean) {

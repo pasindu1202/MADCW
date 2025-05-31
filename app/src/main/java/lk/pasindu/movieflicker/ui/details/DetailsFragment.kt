@@ -76,10 +76,6 @@ class DetailsFragment : Fragment() {
         // Assuming you have a TextView with ID 'textRating'
         binding.textRating.text = getString(R.string.movie_rating_format, formattedVoteAverage)
 
-        // Optional: If you have a RatingBar in your XML (e.g., id 'ratingBar')
-        // TMDb ratings are out of 10, so divide by 2 for a 5-star rating bar
-        // binding.ratingBar.rating = (movie.voteAverage / 2).toFloat()
-        // binding.ratingBar.setIsIndicator(true) // Make it read-only
 
 
         // Ask ViewModel to fetch genre names (this is asynchronous)
@@ -90,11 +86,7 @@ class DetailsFragment : Fragment() {
             binding.textGenre.text = genreText
         }
 
-        // Optional: Set up a back button if you have one in your layout or toolbar
-        // For example, if you have an ImageView with id 'iconBack'
-        // binding.iconBack.setOnClickListener {
-        //     findNavController().navigateUp() // Navigates back to the previous destination
-        // }
+
     }
 
     override fun onDestroyView() {

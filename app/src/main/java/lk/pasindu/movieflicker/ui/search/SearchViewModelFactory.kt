@@ -1,4 +1,4 @@
-// lk.pasindu.movieflicker.ui.search/SearchViewModelFactory.kt
+
 package lk.pasindu.movieflicker.ui.search
 
 import androidx.lifecycle.ViewModel
