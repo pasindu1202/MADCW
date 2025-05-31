@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/netflix_background"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/imageBackdrop"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/movie_backdrop"
+            android:src="@drawable/ic_placeholder_poster"
+            android:background="@color/netflix_secondary" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/netflix_text"
+            android:paddingTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            tools:text="Movie Title from API" />
+
+        <TextView
+            android:id="@+id/textReleaseYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/netflix_text_secondary"
+            android:paddingTop="4dp"
+            android:layout_marginHorizontal="16dp"
+            tools:text="2025 • 2h 10m" />
+
+        <TextView
+            android:id="@+id/textGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/netflix_text_secondary"
+            android:paddingTop="4dp"
+            android:layout_marginHorizontal="16dp"
+            tools:text="Action, Adventure, Sci-Fi" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star"
+                app:tint="@color/netflix_accent"
+                android:contentDescription="@string/rating_star" />
+
+            <TextView
+                android:id="@+id/textRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                android:textColor="@color/netflix_text_secondary"
+                tools:text="8.4 / 10" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:textColor="@color/netflix_text"
+            android:textSize="16sp"
+            android:layout_margin="16dp"
+            tools:text="Overview of the movie from API goes here. This is a dynamic description fetched from the backend and provides a summary of the film. It should wrap to multiple lines." />
+
+    </LinearLayout>
+</ScrollView>

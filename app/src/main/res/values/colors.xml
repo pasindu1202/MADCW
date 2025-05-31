@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Green Theme -->
+    <color name="netflix_primary">#0F3D3E</color> <!-- Deep Green -->
+    <color name="netflix_secondary">#1B4849</color> <!-- Slightly lighter -->
+    <color name="netflix_accent">#34C759</color> <!-- Vivid green (success-like) -->
+    <color name="netflix_accent_dark">#28A745</color>
+
+    <!-- Text Colors -->
+    <color name="netflix_text">#FFFFFF</color>
+    <color name="netflix_text_secondary">#B3B3B3</color>
+    <color name="netflix_text_tertiary">#808080</color>
+    <color name="netflix_hint_text">#666666</color>
+
+    <!-- Background Colors -->
+    <color name="netflix_background">#000000</color>
+    <color name="netflix_surface">#1A1A1A</color>
+    <color name="netflix_surface_variant">#2A2A2A</color>
+    <color name="netflix_search_bg">#2A2A2A</color>
+
+    <!-- Chip Colors -->
+    <color name="netflix_chip_bg">#2F4F4F</color>
+    <color name="netflix_chip_selected">#34C759</color>
+    <color name="netflix_chip_text">#FFFFFF</color>
+    <color name="netflix_chip_text_selected">#FFFFFF</color>
+    <color name="netflix_chip_checked_bg">#93E9BE</color>
+    <color name="netflix_chip_checked_text">#FFFFFF</color>
+
+    <!-- Icon Colors -->
+    <color name="netflix_icon_tint">#B3B3B3</color>
+    <color name="netflix_icon_active">#FFFFFF</color>
+
+    <!-- Card Colors -->
+    <color name="netflix_card_bg">#1A1A1A</color>
+    <color name="netflix_card_stroke">#2F4F4F</color>
+
+    <!-- Status Colors -->
+    <color name="netflix_success">#34C759</color>
+    <color name="netflix_warning">#FFD60A</color>
+    <color name="netflix_error">#FF453A</color>
+
+    <!-- Gradient Colors -->
+    <color name="netflix_gradient_start">#0F3D3E</color>
+    <color name="netflix_gradient_end">#000000</color>
+
+    <!-- Overlay Colors -->
+    <color name="netflix_overlay_light">#33FFFFFF</color>
+    <color name="netflix_overlay_dark">#CC000000</color>
+
+    <!-- Material Design System Colors -->
+    <color name="md_theme_primary">#34C759</color>
+    <color name="md_theme_on_primary">#FFFFFF</color>
+    <color name="md_theme_surface">#0F3D3E</color>
+    <color name="md_theme_on_surface">#FFFFFF</color>
+    <color name="md_theme_background">#000000</color>
+    <color name="md_theme_on_background">#FFFFFF</color>
+
+    <!-- Legacy Support -->
+    <color name="colorPrimary">@color/netflix_accent</color>
+    <color name="colorPrimaryDark">@color/netflix_accent_dark</color>
+    <color name="colorAccent">@color/netflix_accent</color>
+</resources>

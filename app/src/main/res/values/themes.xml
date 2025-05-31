@@ -1,0 +1,198 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MovieFlicker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/netflix_chip_bg</item>
+        <item name="colorPrimaryVariant">@color/netflix_background</item>
+        <item name="colorOnPrimary">@color/netflix_text</item>
+        <item name="colorSecondary">@color/netflix_accent</item>
+        <item name="colorOnSecondary">@color/netflix_text</item>
+        <item name="android:statusBarColor">@color/netflix_primary</item>
+        <item name="android:windowBackground">@color/netflix_background</item>
+        <item name="android:textColorPrimary">@color/netflix_text</item>
+    </style>
+
+    <style name="NetflixTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/netflix_accent</item>
+        <item name="colorPrimaryVariant">@color/netflix_accent_dark</item>
+        <item name="colorOnPrimary">@color/netflix_text</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/netflix_surface_variant</item>
+        <item name="colorSecondaryVariant">@color/netflix_surface</item>
+        <item name="colorOnSecondary">@color/netflix_text</item>
+
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/netflix_background</item>
+        <item name="colorSurface">@color/netflix_surface</item>
+        <item name="colorOnBackground">@color/netflix_text</item>
+        <item name="colorOnSurface">@color/netflix_text</item>
+
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/netflix_primary</item>
+        <item name="android:navigationBarColor">@color/netflix_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+
+        <!-- Window properties -->
+        <item name="android:windowBackground">@color/netflix_background</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <!-- Material components -->
+        <item name="materialCardViewStyle">@style/NetflixCardView</item>
+        <item name="chipStyle">@style/NetflixChip</item>
+        <item name="floatingActionButtonStyle">@style/NetflixFAB</item>
+    </style>
+
+    <!-- Custom Card Style -->
+    <style name="NetflixCardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/netflix_card_bg</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="strokeColor">@color/netflix_card_stroke</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">@drawable/ripple_effect</item>
+    </style>
+
+    <!-- Custom Chip Style -->
+    <style name="NetflixChip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@drawable/chip_selector</item>
+        <item name="android:textColor">@color/netflix_chip_text</item>
+        <item name="chipCornerRadius">16dp</item>
+        <item name="chipMinHeight">32dp</item>
+        <item name="chipStartPadding">12dp</item>
+        <item name="chipEndPadding">12dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Custom FAB Style -->
+    <style name="NetflixFAB" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/netflix_accent</item>
+        <item name="tint">@color/netflix_text</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="elevation">8dp</item>
+        <item name="hoveredFocusedTranslationZ">12dp</item>
+        <item name="pressedTranslationZ">16dp</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="NetflixTextAppearance" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/netflix_text</item>
+    </style>
+
+    <style name="NetflixTextAppearance.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/netflix_text</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="NetflixTextAppearance.Title" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/netflix_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NetflixTextAppearance.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/netflix_text_secondary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="NetflixTextAppearance.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/netflix_text_tertiary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Search Input Style -->
+    <style name="NetflixSearchInput">
+        <item name="android:background">@drawable/search_input_background</item>
+        <item name="android:textColor">@color/netflix_text</item>
+        <item name="android:textColorHint">@color/netflix_hint_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="NetflixButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/netflix_accent</item>
+        <item name="android:textColor">@color/netflix_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="NetflixButton.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/netflix_text</item>
+        <item name="strokeColor">@color/netflix_surface_variant</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:fontFamily">@font/netflix_sans_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- RecyclerView Style -->
+    <style name="NetflixRecyclerView">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">16dp</item>
+    </style>
+
+    <!-- Progress Bar Style -->
+    <style name="NetflixProgressBar" parent="Widget.Material3.CircularProgressIndicator">
+        <item name="android:indeterminateTint">@color/netflix_accent</item>
+        <item name="trackColor">@color/netflix_surface_variant</item>
+        <item name="indicatorSize">48dp</item>
+        <item name="trackThickness">4dp</item>
+    </style>
+
+    <!-- Dialog Styles -->
+    <style name="NetflixDialog" parent="ThemeOverlay.Material3.Dialog">
+        <item name="colorSurface">@color/netflix_surface</item>
+        <item name="colorOnSurface">@color/netflix_text</item>
+        <item name="android:windowBackground">@drawable/card_background</item>
+    </style>
+
+    <!-- Bottom Sheet Style -->
+    <style name="NetflixBottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="colorSurface">@color/netflix_surface</item>
+        <item name="colorOnSurface">@color/netflix_text</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <!-- Toolbar Style -->
+    <style name="NetflixToolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/netflix_primary</item>
+        <item name="titleTextColor">@color/netflix_text</item>
+        <item name="subtitleTextColor">@color/netflix_text_secondary</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <!-- Tab Layout Style -->
+    <style name="NetflixTabLayout" parent="Widget.Material3.TabLayout">
+        <item name="android:background">@color/netflix_surface</item>
+        <item name="tabTextColor">@color/netflix_text_secondary</item>
+        <item name="tabSelectedTextColor">@color/netflix_text</item>
+        <item name="tabIndicatorColor">@color/netflix_accent</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="android:fontFamily">@font/netflix_sans_medium</item>
+    </style>
+
+    <!-- Switch Style -->
+    <style name="NetflixSwitch" parent="Widget.Material3.CompoundButton.Switch">
+        <item name="thumbTint">@color/netflix_text</item>
+        <item name="trackTint">@color/netflix_surface_variant</item>
+        <item name="android:fontFamily">@font/netflix_sans_regular</item>
+    </style>
+
+
+</resources>

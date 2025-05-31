@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NetflixTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/netflix_accent</item>
+        <item name="colorPrimaryVariant">@color/netflix_accent_dark</item>
+        <item name="colorOnPrimary">@color/netflix_text</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/netflix_surface_variant</item>
+        <item name="colorSecondaryVariant">@color/netflix_surface</item>
+        <item name="colorOnSecondary">@color/netflix_text</item>
+
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/netflix_background</item>
+        <item name="colorSurface">@color/netflix_surface</item>
+        <item name="colorOnBackground">@color/netflix_text</item>
+        <item name="colorOnSurface">@color/netflix_text</item>
+
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/netflix_primary</item>
+        <item name="android:navigationBarColor">@color/netflix_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Window properties -->
+        <item name="android:windowBackground">@color/netflix_background</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <!-- Material components -->
+        <item name="materialCardViewStyle">@style/NetflixCardView</item>
+        <item name="chipStyle">@style/NetflixChip</item>
+        <item name="floatingActionButtonStyle">@style/NetflixFAB</item>
+    </style>
+</resources>

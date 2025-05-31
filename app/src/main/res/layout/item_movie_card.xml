@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/ripple_effect"
+    app:cardBackgroundColor="@color/netflix_card_bg"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    app:strokeColor="@color/netflix_card_stroke"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <!-- Movie Poster with Aspect Ratio -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/posterContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="2:3">
+
+            <ImageView
+                android:id="@+id/imageViewMoviePoster"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_poster"
+                android:background="@color/netflix_surface_variant"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <!-- Gradient Overlay for Text Readability -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@drawable/poster_gradient_overlay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Rating Badge -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/ratingBadges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/netflix_overlay_dark"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_star"
+                        app:tint="@color/netflix_warning" />
+
+                    <TextView
+                        android:id="@+id/textViewRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="8.5"
+                        android:textColor="@color/netflix_text"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:text="8.5" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Play Button Overlay -->
+            <ImageView
+                android:id="@+id/imageViewPlayButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_play_circle"
+                android:alpha="0.9"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@color/netflix_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Movie Information Container -->
+        <LinearLayout
+            android:id="@+id/movieInfoContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/posterContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Movie Title -->
+            <TextView
+                android:id="@+id/textViewMovieTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_title"
+                android:textColor="@color/netflix_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2dp"
+                tools:text="The Dark Knight" />
+
+            <!-- Movie Details Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <!-- Release Year -->
+                <TextView
+                    android:id="@+id/textViewYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2008"
+                    android:textColor="@color/netflix_text_secondary"
+                    android:textSize="12sp"
+                    tools:text="2008" />
+
+                <!-- Separator Dot -->
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/dot_separator" />
+
+                <!-- Runtime -->
+                <TextView
+                    android:id="@+id/textViewRuntime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="152 min"
+                    android:textColor="@color/netflix_text_secondary"
+                    android:textSize="12sp"
+                    tools:text="152 min" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <!-- Favorite Button -->
+                <ImageView
+                    android:id="@+id/imageViewFavorite"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_favorite_border"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="2dp"
+                    android:contentDescription="Add to favorites"
+                    app:tint="@color/netflix_text_secondary" />
+
+            </LinearLayout>
+
+            <!-- Genre Chip -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGenre"
+                style="@style/Widget.Material3.Chip.Assist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Action"
+                android:textColor="@color/netflix_chip_text"
+                android:textSize="10sp"
+                app:chipBackgroundColor="@color/netflix_chip_bg"
+                app:chipMinHeight="24dp"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                tools:text="Action" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
